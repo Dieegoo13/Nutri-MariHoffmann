@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nutri Mariana Hoffmann</title>
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="assets/css/estilo.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <script defer src="assets/js/main.js"></script>
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <!-- Cabeçalho -->
+    <header class="header">
+        <a href="#">
+            <img src="assets/img/logoNutri.png" alt="Logo Nutri Mariana Hoffmann" class="logo">
+        </a>
+
+        <!-- Menu Desktop -->
+        <nav class="menu" aria-label="Menu principal">
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#consulta">Consulta</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <!-- Redes Sociais Desktop -->
+        <aside class="logos-redes" aria-label="Redes sociais">
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/5599999999999" target="_blank" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook"></i>
+            </a>
+        </aside>
+
+        <!-- Botão Hambúrguer (Mobile) -->
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Menu Mobile (Sidebar) -->
+    <div class="menu-mobile" id="menu-mobile">
+        <!-- Botão Fechar -->
+        <div class="menu-close" id="menu-close">
+            <i class="fa-solid fa-times"></i>
+        </div>
+
+        <!-- Links do Menu -->
+        <nav class="menu-mobile-links" aria-label="Menu mobile">
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#consulta">Consulta</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <!-- Redes Sociais Mobile -->
+        <div class="menu-mobile-redes">
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/5599999999999" target="_blank" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Overlay (fundo escuro) -->
+    <div class="overlay" id="overlay"></div>
+
+    <main>
+        <!-- Seção Início -->
+        <section id="inicio" class="inicio">
+            <article class="inicio-container">
+                <h1>MARIANA HOFFMANN</h1>
+                <p>
+                    Transformando vidas através da nutrição.<br>
+                    “A vida se transforma quando a nutrição se torna um caminho para o bem-estar, equilíbrio e saúde
+                    plena.”
+                </p>
+                <a href="#contato" class="btn">Agende sua consulta</a>
+            </article>
+
+            <figure class="img-background">
+                <img src="assets/img/vegetais.png" alt="Fundo com vegetais coloridos">
+            </figure>
+        </section>
+
+        <!-- Seção Sobre -->
+        <section id="sobre" class="sobre">
+            <div class="sobre-container">
+                <figure class="perfil">
+                    <img src="assets/img/mariana-perfil.jpg" alt="Foto de Mariana Hoffmann">
+                </figure>
+
+                <article class="sobre-mim">
+                    <h2>Quem é a Nutri Mariana Hoffmann?</h2>
+                    <p>
+                        Sou nutricionista formada pela UFMG e busco constantemente me especializar para oferecer o
+                        melhor
+                        atendimento. Acredito em uma nutrição personalizada, que respeita a individualidade e os gostos
+                        de cada
+                        pessoa. <br><br>
+
+                        Meu objetivo é promover saúde e qualidade de vida por meio de uma alimentação equilibrada e
+                        prazerosa, sem
+                        culpa e sem sacrifícios. <br><br>
+
+                        Será um prazer acompanhá-lo nessa jornada rumo a uma relação mais leve com a comida. <br><br>
+                        <strong style="color: #018665;">— Mariana Hoffmann, Nutricionista</strong>
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Seção Serviços -->
+        <section id="servicos" class="servicos">
+            <h2>Serviços</h2>
+
+            <div class="cards-container">
+                <article class="card">
+                    <h3>Emagrecimento</h3>
+                    <figure>
+                        <img src="assets/img/emagrecimento.png" alt="Emagrecimento saudável">
+                    </figure>
+                    <p>
+                        Plano alimentar equilibrado para perda de peso saudável e duradoura, sem dietas restritivas.
+                        Resultados sustentáveis e alinhados ao seu estilo de vida.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Doenças crônicas</h3>
+                    <figure>
+                        <img src="assets/img/doenca-cronica.png" alt="Doenças crônicas">
+                    </figure>
+                    <p>
+                        Orientação nutricional para controle de doenças como diabetes, hipertensão e colesterol alto.
+                        Cuide da sua saúde com alimentação consciente.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Reeducação alimentar</h3>
+                    <figure>
+                        <img src="assets/img/reducao-alimentar.png" alt="Reeducação alimentar">
+                    </figure>
+                    <p>
+                        Aprenda a comer de forma equilibrada e prazerosa, respeitando suas preferências e rotina.
+                        Reeduque-se sem abrir mão do sabor.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Nutrição funcional</h3>
+                    <figure>
+                        <img src="assets/img/nutricao-funcional.png" alt="Nutrição funcional">
+                    </figure>
+                    <p>
+                        Abordagem personalizada que considera seu corpo como um todo.
+                        Promove saúde e bem-estar por meio de nutrientes e equilíbrio.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Acompanhamento pós-cirurgia</h3>
+                    <figure>
+                        <img src="assets/img/acompanhamento.png" alt="Acompanhamento pós-cirurgia">
+                    </figure>
+                    <p>
+                        Suporte nutricional completo para recuperação eficiente e segura após cirurgias.
+                        Restaure sua saúde com equilíbrio e cuidado.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Exame de bioimpedância</h3>
+                    <figure>
+                        <img src="assets/img/exame.png" alt="Exame de bioimpedância">
+                    </figure>
+                    <p>
+                        Avalie sua composição corporal com precisão.
+                        Entenda seu percentual de gordura, massa magra e acompanhe seus resultados reais.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section id="consulta" class="consulta">
+            <div class="consulta-container">
+
+                <article class="consulta-info">
+                    <h2>Consulta com a nutri</h2>
+                    <p>Durante a consulta, você terá:</p>
+                    <ul>
+                        <li>Anamnese detalhada;</li>
+                        <li>Questionário de frequência alimentar;</li>
+                        <li>Avaliação nutricional, clínica e antropométrica;</li>
+                        <li>Solicitação de exames, se necessário;</li>
+                        <li>Plano alimentar entregue na hora;</li>
+                        <li>Prescrição de suplementação, quando indicada;</li>
+                        <li>Acompanhamento via WhatsApp para dúvidas e orientações;</li>
+                        <li>Opção de consulta presencial ou teleconsulta.</li>
+                    </ul>
+                </article>
+
+                <figure class="consulta-img">
+                    <img src="assets/img/consulta-nutri.png" alt="Foto de Mariana Hoffmann">
+                </figure>
+            </div>
+        </section>
+
+
+        <section id="feedback" class="feedback">
+            <h2>Feedback de Pacientes</h2>
+            <div class="feedback-container">
+
+                <!-- Card 1 -->
+                <article class="card-feedback">
+                    <p class="nome-paciente">Fernando Monteiro</p>
+                    <img src="assets/img/paciente2.png" alt="foto de perfil de Carlos Henrique" class="foto-paciente">
+                    <div class="estrelas">★★★★★</div>
+                    <p class="texto-feedback">
+                        A Mariana me ajudou a alcançar meus objetivos sem restrições. Me sinto muito mais disposto e
+                        saudável!
+                    </p>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="card-feedback">
+                    <p class="nome-paciente">Ana Beatriz</p>
+                    <img src="assets/img/paciente3.png" alt="foto de perfil de Ana Beatriz" class="foto-paciente">
+                    <div class="estrelas">★★★★★</div>
+                    <p class="texto-feedback">
+                        Adorei o atendimento! Plano alimentar personalizado e com comidas que eu realmente gosto.
+                    </p>
+                </article>
+
+                <!-- Card 3 (em formato de celular) -->
+                <article class="card-feedback celular">
+                    <div class="tela-celular">
+
+                        <!-- Mensagem 1 -->
+                        <div class="mensagem">
+                            <img src="assets/img/paciente4.png" alt="" class="foto-paciente-balao">
+                            <div class="conteudo-balao">
+                                <p class="nome-paciente-balão"> Rafaela Potter</p>
+                                <div class="balao">
+                                    <p class="texto-feedback">Excelente atendimento! A Mariana é super atenciosa e o
+                                        plano fez diferença na minha rotina.</p>
+                                    <div class="estrelas-balao">★★★★★</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mensagem 2 -->
+                        <div class="mensagem">
+                            <img src="assets/img/paciente5.png" alt="" class="foto-paciente-balao">
+                            <div class="conteudo-balao">
+                                <p class="nome-paciente-balão">Julia Silva</p>
+                                <div class="balao">
+                                    <p class="texto-feedback">Plano alimentar prático e fácil de seguir! Já vejo
+                                        resultados!</p>
+                                    <div class="estrelas-balao">★★★★★</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mensagem 3 -->
+                        <div class="mensagem">
+                            <img src="assets/img/paciente1.png" alt="foto de perfil de Fernando"
+                                class="foto-paciente-balao">
+                            <div class="conteudo-balao">
+                                <p class="nome-paciente-balão">Tereza Okazaki</p>
+                                <div class="balao">
+                                    <p class="texto-feedback">
+                                        Amei o atendimento Recomendo demais
+                                    </p>
+                                    <div class="estrelas-balao">★★★★★</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+
+        <!-- Seção Contato -->
+
+        <section id="contato" class="contato">
+
+            <div class="maps">
+                <h2>Como Chegar ao Consultório?</h2>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.218569979631!2d-43.17843888503346!3d-22.902780085013977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f0b1f4d8e9b%3A0x4d6f4f4a1e7ef6a7!2sUFMG!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <div class="formulario">
+                <h2>Fale Comigo</h2>
+                <form action="https://formspree.io/f/SEU_ID_AQUI" method="POST">
+                    <fieldset>
+                        <legend>Formulário de Contato</legend>
+
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem" required></textarea>
+
+                        <button type="submit">Enviar</button>
+                    </fieldset>
+                </form>
+            </div>
+
+        </section>
+
+
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="card-duvidas">
+                <h3>Dúvidas Frequentes</h3>
+                <div class="duvidas">
+                    <p class="perguntas">Quais as especialidades?</p>
+                    <p class="respostas">Emagrecimento saudável, doenças crônicas, nutrição funcional, reeducação
+                        alimentar, acompanhamento pós-cirurgia e nutrição clínica.</p>
+                    <p class="perguntas">Quanto tempo dura a consulta?</p>
+                    <p class="respostas">Duração de 1 hora.</p>
+                    <p class="perguntas">Recebo minha dieta na hora?</p>
+                    <p class="respostas">Sim, na primeira consulta.</p>
+                    <p class="perguntas">São aceitos convênios?</p>
+                    <p class="respostas">Não aceitamos convênios; as consultas são particulares. Contamos com uma
+                        política de descontos.</p>
+                </div>
+            </div>
+            <div class="card-pagamentos">
+                <h3>Formas de Pagamento</h3>
+                <div class="icon-pay">
+                    <img src="assets/img/Visa.png" alt="Visa">
+                    <img src="assets/img/mastercard.png" alt="MasterCard">
+                    <img src="assets/img/pix.png" alt="Pix">
+                </div>
+            </div>
+            <div class="card-home">
+                <h3>Mapa do Site</h3>
+                <nav class="menu-footer">
+                    <a href="#inicio">Início</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#servicos">Serviços</a>
+                    <a href="#consulta">Consulta</a>
+                    <a href="#contato">Contato</a>
+                </nav>
+            </div>
+            <div class="logos-redes-footer">
+                <h3>Redes</h3>
+                <div class="redes-icons">
+                    <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/5599999999999" target="_blank" aria-label="WhatsApp"><i
+                            class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i
+                            class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <!-- Créditos separados -->
+            <div class="creditos-footer">
+                <p>© 2025 Nutri Mariana Hoffmann - Todos os direitos reservados</p>
+                <address>
+                    Desenvolvido por <a href="#">Diego Miranda</a>
+                </address>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+<script src="assets/js/main.js"> </script>
+
+</html>

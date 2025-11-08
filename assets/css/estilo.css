@@ -1,0 +1,1324 @@
+/* ===========================
+   IMPORT GERAL
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* ===========================
+   ESTILO GERAL
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F9F9F9;
+    color: #008D11;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h2 {
+    font-family: "Pacifico", cursive;
+    font-size: 2.5rem;
+    color: #018665;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #dfdfdf;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    z-index: 3;
+}
+
+.header .logo {
+    width: 180px;
+    height: 180px;
+}
+
+.logos-redes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logos-redes a {
+    color: #4AB75F;
+    font-size: 2rem;
+    transition: color 0.3s;
+}
+
+.logos-redes a:hover {
+    color: #5A7F44;
+    /* cor de destaque */
+}
+
+.menu a {
+    color: #4AB75F;
+    padding: 10px;
+    /* já definido aqui */
+    border-radius: 10px;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #5A7F44;
+    border-radius: 10px;
+    color: #F9F9F9;
+}
+
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: #4AB75F;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.menu-toggle:hover {
+    color: #5A7F44;
+}
+
+/* Menu mobile overlay */
+.menu-mobile {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background-color: #dfdfdf;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    z-index: 9999;
+    transition: right 0.4s ease;
+}
+
+.menu-mobile.active {
+    right: 0;
+}
+
+/* Botão fechar */
+.menu-close {
+    align-self: flex-end;
+    font-size: 2rem;
+    color: #4AB75F;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    transition: color 0.3s;
+}
+
+.menu-close:hover {
+    color: #5A7F44;
+}
+
+/* Links do menu mobile */
+.menu-mobile-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.menu-mobile-links a {
+    color: #4AB75F;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.menu-mobile-links a:hover {
+    background-color: #5A7F44;
+    color: #F9F9F9;
+}
+
+/* Redes sociais no menu mobile */
+.menu-mobile-redes {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid #4AB75F;
+}
+
+.menu-mobile-redes a {
+    color: #4AB75F;
+    font-size: 2rem;
+    transition: all 0.3s;
+}
+
+.menu-mobile-redes a:hover {
+    color: #5A7F44;
+    transform: scale(1.2);
+}
+
+/* Overlay escuro */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9998;
+    transition: all 0.3s;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ===========================
+   SEÇÃO INICIO
+=========================== */
+.inicio {
+    position: relative;
+    height: 800px;
+    background-color: #018665;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.inicio-container {
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    max-width: 700px;
+}
+
+.img-background {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+
+.inicio p,
+h1 {
+    margin: 1rem;
+    font-size: 2.4rem;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.btn {
+    background-color: #7FC37E;
+    color: #0B4D13;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #4AB75F;
+}
+
+/* ===========================
+   SOBRE
+=========================== */
+.sobre {
+    background-color: #F4CBCB;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
+}
+
+.sobre-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10rem;
+    flex-wrap: wrap;
+
+}
+
+/* imagem da nutricionista */
+.perfil img {
+    height: 500px;
+    border: 5px solid #018665;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* texto */
+.sobre-mim {
+    text-align: start;
+    width: 700px;
+}
+
+.sobre-mim p {
+    text-align: start;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    color: #444;
+}
+
+/* ===========================
+   SERVIÇOS
+=========================== */
+
+.cards-container {
+    margin: 0 auto;
+    width: 1650px;
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.card {
+    background-color: #4ab7602c;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    border: 2px solid #018665;
+    border-radius: 10px;
+    width: 400px;
+    height: 650px;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 141, 17, 0.3);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 3px solid #008D11;
+    transition: transform 0.4s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    font-family: "Pacifico", cursive;
+    font-size: 1.8rem;
+    color: #008D11;
+    margin: 1rem 0;
+}
+
+.card p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #50A620;
+    line-height: 1.5;
+    padding: 0 1rem 1.5rem;
+}
+
+/* ===========================
+   CONSULTA
+=========================== */
+
+.consulta {
+    background-color: #A1D683;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
+}
+
+.consulta-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.consulta-img img {
+    height: 320px;
+    border: 5px solid #018665;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease;
+}
+
+.consulta-img img:hover {
+    transform: scale(1.03);
+}
+
+.consulta-info {
+    max-width: 600px;
+}
+
+.consulta-info p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    color: #004d26;
+    margin-bottom: 1rem;
+}
+
+.consulta-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.consulta-info li {
+    position: relative;
+    padding-left: 28px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: #008D11;
+}
+
+/* marcador personalizado com "check" verde */
+.consulta-info li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #018665;
+    font-weight: bold;
+}
+
+/* ===========================
+   FEEDBACK
+=========================== */
+
+.feedback {
+    background-color: #A1D683;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.feedback-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 4rem;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Estilo base dos cards */
+.card-feedback {
+    background: #008A68;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    width: 350px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nome-paciente {
+    font-family: "Pacifico", cursive;
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.foto-paciente {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #018665;
+    margin-bottom: 1rem;
+}
+
+.estrelas {
+    color: #FFD700;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.texto-feedback {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    color: #fff;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.card-feedback.celular {
+    background: #fff;
+    border: 12px solid #222;
+    border-radius: 36px;
+    width: 300px;
+    height: 540px;
+    position: relative;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tela-celular {
+    background-color: #27bd2759;
+    border-radius: 28px;
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    overflow-y: auto;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cada mensagem de paciente */
+.mensagem {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    gap: 0.8rem;
+}
+
+/* Foto pequena sobreposta */
+.foto-paciente-balao {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #018665;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+    margin-top: 10px;
+    margin-left: -10px;
+    background-color: #fff;
+}
+
+/* Container do nome + balão */
+.conteudo-balao {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: -10px;
+    /* sobreposição leve */
+}
+
+/* Nome do paciente */
+.nome-paciente-balão {
+    font-family: "Pacifico", cursive;
+    font-size: 1.1rem;
+    color: #018665;
+    margin-bottom: 0.3rem;
+}
+
+/* Balão da mensagem */
+.balao {
+    background-color: #018665;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 4px 14px 14px 14px;
+    max-width: 200px;
+    height: auto;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+/* Estrelas dentro do balão */
+.estrelas-balao {
+    color: #FFD700;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+}
+
+/* ===========================
+   CONTATO
+=========================== */
+
+/* ======= CONTATO ======= */
+.contato {
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 80px 40px;
+    text-align: center;
+}
+
+/* ======= MAPA ======= */
+.maps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.maps iframe {
+    border-radius: 12px;
+    width: 750px;
+    height: 500px;
+}
+
+/* ======= FORMULÁRIO ======= */
+.formulario {
+    width: 800px;
+    padding: 2rem;
+    text-align: left;
+}
+
+form fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form legend {
+    font-weight: bold;
+    color: #008A68;
+    margin-bottom: 1rem;
+    font-family: "Poppins", sans-serif;
+}
+
+label {
+    font-weight: 500;
+    color: #004d26;
+    font-family: "Poppins", sans-serif;
+}
+
+input,
+textarea {
+    padding: 10px 14px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    resize: none;
+    transition: border 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #018665;
+}
+
+button {
+    background-color: #018665;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #026c52;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.titulos-footer {
+    width: 5000px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-container {
+    margin: 0 auto;
+    max-width: 1300px;
+    background-color: #F4CBCB;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #F4CBCB;
+    width: auto;
+    padding: 1rem;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer h3 {
+    font-family: "Pacifico", cursive;
+    font-size: 1.8rem;
+    color: #008D11;
+    margin: 1rem 0;
+}
+
+.footer a:hover {
+    color: #008A68;
+    text-decoration: underline;
+}
+
+/* Perguntas e respostas */
+.card-duvidas {
+    width: 400px;
+    line-height: 1.7;
+    ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.duvidas {
+    text-align: start;
+}
+
+.perguntas {
+    font-size: 1.4rem;
+    color: #018665;
+    font-weight: 600;
+}
+
+.respostas {
+    font-size: 1.1rem;
+    color: #0B4D13;
+    font-weight: 300;
+}
+
+/* Ícones de pagamento */
+.icon-pay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 10px;
+}
+
+.icon-pay img {
+    width: 80px;
+    height: auto;
+}
+
+/* Mapa do site */
+.menu-footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.menu-footer a {
+    text-decoration: none;
+    color: #008D11;
+    font-weight: 500;
+}
+
+.menu-footer a:hover {
+    color: #008A68;
+}
+
+/* Redes sociais */
+.logos-redes-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    font-size: 2.2rem;
+    color: #4AB75F;
+}
+
+.redes-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    font-size: 2rem;
+}
+
+
+.redes-icons a[aria-label="Instagram"] {
+    color: #E1306C;
+}
+
+.redes-icons a[aria-label="WhatsApp"] {
+    color: #25D366;
+}
+
+.redes-icons a[aria-label="Facebook"] {
+    color: #1877F2;
+}
+
+.logos-redes-footer a:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+/* Créditos finais */
+
+.footer address,
+.creditos-footer {
+    margin-top: 1rem;
+    font-style: normal;
+    font-weight: 800;
+    color: #018665;
+    text-align: center;
+}
+
+.footer address a {
+    color: #018665;
+    text-decoration: none;
+}
+
+.footer address a:hover {
+    text-decoration: underline;
+}
+
+/* ===========================
+   RESPONSIVIDADE
+=========================== */
+
+/* ===========================
+   MEDIA QUERIES - RESPONSIVIDADE
+=========================== */
+
+/* Tablets grandes e notebooks pequenos */
+@media (max-width: 1400px) {
+    .cards-container {
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    .consulta-container,
+    .feedback-container {
+        gap: 3rem;
+    }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+
+    /* Header */
+    .header {
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 20px;
+    }
+
+    .header .logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* Esconder menu desktop e redes do header */
+    .menu {
+        display: none !important;
+    }
+
+    .logos-redes {
+        display: none !important;
+    }
+
+    /* Mostrar toggle */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Início */
+    .inicio {
+        height: auto;
+    }
+
+    .inicio-container {
+        margin-top: 0.1rem;
+    }
+
+    .img-background {
+        display: none;
+    }
+
+    /* Sobre */
+    .sobre-container {
+        gap: 3rem;
+        justify-content: center;
+    }
+
+    .perfil img {
+        height: 400px;
+    }
+
+    .sobre-mim {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .sobre-mim p {
+        font-size: 1.5rem;
+    }
+
+    /* Cards de serviços */
+    .cards-container {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .card {
+        width: 350px;
+        height: auto;
+    }
+
+    /* Consulta */
+    .consulta-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .consulta-img img {
+        height: 280px;
+    }
+
+    /* Feedback */
+    .feedback-container {
+        gap: 2rem;
+    }
+
+    /* Contato */
+    .contato {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .maps iframe {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .formulario {
+        width: 100%;
+        max-width: 600px;
+    }
+}
+
+/* Tablets pequenos e celulares grandes */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    /* Header */
+    .header {
+        padding: 8px;
+    }
+
+    .header .logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .menu-mobile {
+        width: 250px;
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu a {
+        font-size: 1rem;
+        margin-left: 10px;
+        padding: 8px;
+    }
+
+    .logos-redes a {
+        font-size: 1.5rem;
+    }
+
+    /* Início */
+    .inicio {
+        padding: 120px 15px 30px;
+    }
+
+    .inicio p,
+    h1 {
+        font-size: 1.5rem;
+        margin: 0.5rem;
+    }
+
+    .img-background img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Sobre */
+    .sobre {
+        padding: 60px 15px;
+    }
+
+    .perfil img {
+        height: 300px;
+    }
+
+    .sobre-mim p {
+        font-size: 1.2rem;
+    }
+
+    /* Serviços */
+    .cards-container {
+        padding: 60px 15px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
+
+    .card h3 {
+        font-size: 1.5rem;
+    }
+
+    /* Consulta */
+    .consulta {
+        padding: 60px 15px;
+    }
+
+    .consulta-img img {
+        height: 240px;
+    }
+
+    .consulta-info p {
+        font-size: 1.5rem;
+    }
+
+    .consulta-info li {
+        font-size: 1.1rem;
+    }
+
+    /* Feedback */
+    .feedback {
+        padding: 60px 15px;
+    }
+
+    .card-feedback {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        min-height: 450px;
+    }
+
+    /* Contato */
+    .maps iframe {
+        height: 350px;
+    }
+
+    /* Footer - Ocultar cards, manter apenas créditos */
+    .footer-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .card-duvidas,
+    .card-pagamentos,
+    .card-home,
+    .logos-redes-footer {
+        display: none;
+    }
+
+    .creditos-footer {
+        width: 100%;
+        text-align: center;
+    }
+
+    .creditos-footer p,
+    .creditos-footer address {
+        font-size: 0.9rem;
+    }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    /* Header */
+    .header {
+        padding: 10px 15px;
+    }
+
+    .header .logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .menu-toggle {
+        font-size: 1.8rem;
+    }
+
+    .menu-mobile {
+        width: 220px;
+        padding: 1.5rem 1rem;
+    }
+
+    .menu-mobile-links a {
+        font-size: 1.3rem;
+    }
+
+    .menu-mobile-redes a {
+        font-size: 1.8rem;
+    }
+
+    .menu a {
+        font-size: 0.9rem;
+        margin-left: 5px;
+        padding: 6px;
+    }
+
+    .logos-redes {
+        gap: 0.5rem;
+    }
+
+    .logos-redes a {
+        font-size: 1.3rem;
+    }
+
+    /* Início */
+    .inicio {
+        padding: 100px 10px 20px;
+        height: auto;
+    }
+
+    .inicio p,
+    h1 {
+        font-size: 1.2rem;
+        margin: 0.3rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    /* Sobre */
+    .sobre {
+        padding: 40px 10px;
+    }
+
+    .sobre-container {
+        gap: 2rem;
+    }
+
+    .perfil img {
+        height: 250px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .sobre-mim {
+        width: 100%;
+    }
+
+    .sobre-mim p {
+        font-size: 1rem;
+    }
+
+    /* Serviços */
+    .cards-container {
+        padding: 40px 10px;
+    }
+
+    .card {
+        width: 100%;
+        padding: 1rem;
+        margin: 0.5rem 0;
+    }
+
+    .card img {
+        height: 200px;
+    }
+
+    .card h3 {
+        font-size: 1.3rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+    }
+
+    /* Consulta */
+    .consulta {
+        padding: 40px 10px;
+    }
+
+    .consulta-container {
+        gap: 1.5rem;
+    }
+
+    .consulta-img img {
+        height: 200px;
+        width: 100%;
+    }
+
+    .consulta-info p {
+        font-size: 1.2rem;
+    }
+
+    .consulta-info li {
+        font-size: 1rem;
+        padding-left: 20px;
+    }
+
+    /* Feedback */
+    .feedback {
+        padding: 40px 10px;
+    }
+
+    .feedback-container {
+        gap: 1.5rem;
+    }
+
+    .card-feedback {
+        width: 100%;
+        max-width: 300px;
+        padding: 1.5rem;
+    }
+
+    .nome-paciente {
+        font-size: 1.4rem;
+    }
+
+    .foto-paciente {
+        width: 100px;
+        height: 100px;
+    }
+
+    .texto-feedback {
+        font-size: 1.1rem;
+    }
+
+    .card-feedback.celular {
+        width: 280px;
+        height: 500px;
+    }
+
+    /* Contato */
+    .contato {
+        padding: 40px 10px;
+    }
+
+    .maps iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    .formulario {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    input,
+    textarea {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px 18px;
+    }
+
+    /* Footer */
+    .creditos-footer p,
+    .creditos-footer address {
+        font-size: 0.8rem;
+        padding: 0 10px;
+    }
+}
+
+/* Celulares muito pequenos */
+@media (max-width: 360px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .inicio p,
+    h1 {
+        font-size: 1rem;
+    }
+
+    .menu a {
+        font-size: 0.8rem;
+        margin-left: 3px;
+        padding: 5px;
+    }
+
+    .card-feedback.celular {
+        width: 260px;
+        height: 480px;
+    }
+}
